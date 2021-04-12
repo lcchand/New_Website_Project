@@ -1,1 +1,2 @@
 Changed some text
+Second line of text added
