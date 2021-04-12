@@ -1,0 +1,148 @@
+/* ========================================================================== */
+/* _navbar.scss                                                               */
+/* ========================================================================== */
+
+
+.main_nav {
+    position: absolute;
+    //top: 55px;
+    top: 100%;
+    //left: 0;
+    width: 100%;
+    background: var(--Theme-Color-Grey);
+    max-height: 0;
+    // Just added this
+   // width: calc(100vw);
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+   // z-index: 1;
+    
+    @media #{$brk-desktop} {
+	position: relative;
+	width: unset;
+	top: 0;
+	//top: unset;
+	right: unset;
+	max-height: unset;// Returns content height to default
+	background: transparent;
+    }
+
+}
+
+
+
+.main_nav ul {
+    margin: 0;
+    padding: 0;
+    //padding: 2em 7em;
+    list-style: none;
+    //align-items: center;
+
+    @media #{$brk-tablet} {
+	display: flex;
+	flex-direction: column;
+    }
+
+    @media #{$brk-desktop} {
+	flex-direction: row;
+    }
+}
+
+.main_nav li {
+    border-bottom: 1px solid var(--Theme-Color-Grey-Md);
+    letter-spacing: 0.0625em;
+
+
+    @media #{$brk-desktop} {
+	border-bottom: none;
+    }
+}
+
+.main_nav:last-child {
+    border-bottom: none;
+}
+
+.main_nav a {
+  color: var(--Theme-Color-White-Lt);
+  text-decoration: none;
+  display: block;
+  padding: 2em 7em;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media #{$brk-tablet} {
+    margin: 0;
+    padding: 18px;
+  }
+  
+}
+
+
+
+
+// Hover State for Navigation
+.logo a:hover,
+.logo a:focus,
+.main_nav a:hover,
+.main_nav a:focus,
+.main_nav--active {
+    background: var(--Theme-Color-Yellow);
+    color: var(--Body-Text-Color);
+}
+
+
+
+
+/* Mobile Nav Settings ----------------- */
+
+.mobile_nav {
+    // Right=2vw align with  Section h2s
+    padding: 1em 2vw 1em 1em; //16px
+    position: absolute;
+    right: .5em;//.5em
+    cursor: pointer;
+
+   @media #{$brk-desktop} {
+	display: none;
+    }
+
+}
+
+
+
+// Hamburger Animation
+.mobile_nav--open {
+    transform: rotate(45deg);
+}
+
+.mobile_nav--open .hamburger::before {
+    opacity: 0;
+}
+
+.mobile_nav--open .hamburger::after {
+    transform: translateY(-3px) rotate(-90deg);
+}
+
+
+// Actual Stacked 3 Bar Element ------
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    background: var(--Theme-Color-White);
+    height: 3px;
+    width: 1.75em;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.hamburger::before {
+    transform: translateY(-7px);
+}
+
+.hamburger::after {
+    transform: translateY(4px);
+}
+

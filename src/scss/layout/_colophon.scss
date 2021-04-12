@@ -1,0 +1,77 @@
+/* ========================================================================== */
+/*   colopon.scss                                                             */
+/* ========================================================================== */
+
+
+
+.colophon_div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-gap: 15px;
+
+    @media #{$brk-tablet} {
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, auto);
+	grid-gap: 30px;
+    }
+}
+
+
+
+.colophon_article {
+    text-align: center;
+    padding: 15px 15px 30px 15px;
+
+    @media #{$brk-desktop} {
+	padding: 15px 20px;
+    }
+
+    @media #{$brk-1278} {
+	padding: 15px 90px;
+    }
+}
+
+
+.colophon_h4 {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+
+.colophon_a {
+    display: inline-block;
+    padding: 10px;
+}
+
+
+.colophon_p {
+    text-align: left;
+}
+
+.colophon_p--wide {
+    padding: 10px 15px;
+
+    @media #{$brk-desktop} {
+	padding: 15px 20px;
+    }
+
+    @media #{$brk-1278} {
+	padding: 15px 90px;
+    }
+}
+
+
+.colophon_svg_icon {
+    
+    @include svg-icon(
+	$size:65px,
+	$fill: var(--Theme-Color-White)
+    )
+
+     &:hover, &:focus {
+	transform: scale(1.1);
+	transition: 0.3s ease-in-out;
+    }
+}

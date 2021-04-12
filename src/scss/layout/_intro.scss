@@ -1,0 +1,176 @@
+/* ========================================================================== */
+/* _intro.scss  - Head Shot                                                   */
+/* ========================================================================== */
+
+
+
+.section--intro {
+    padding-top: 6em;
+    height: 100vh;
+    /* animation-name duration delay-timing animation-type finish */
+    animation: no-transform 2s .5s cubic-bezier(0, .5, 0, 1) forwards;
+    background-image: url('../assets/Lance-04-1440W.jpg');
+    width: 100%;
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    opacity: 0; /* Start hidden then appears */
+    transform: translateY(-4rem);
+    color: var(--Theme-Color-White);
+}
+
+
+
+.section--graphics-intro {
+    background-image: url('../assets/Graphics-Hero-Gradient.jpg');
+}
+
+    
+
+.animate-pop-in {
+    animation: no-transform cubic-bezier(0, .3, .9, 1.2) forwards;
+    opacity: 0; /* Start Hidden then Visible */
+    transform: translateY(-4rem) scale(.8);
+}
+
+
+
+.introduction {
+    font-family: var(--font-family-intro);
+    font-weight: var(--heading-weight-bold);
+    font-style: italic;
+    font-size: 3.5em;
+    line-height: .9em;
+    letter-spacing: 2px;
+    margin-top: 56vh;//7em
+    margin-bottom: 10px;
+    animation-delay: .8s;
+
+    @media #{$brk-tablet} {
+	letter-spacing: 3px;
+	margin-top: 12em;
+    }
+
+    @media #{$brk-desktop} {
+	letter-spacing: 3px;
+	margin-top: 70vh;//8em
+    }
+
+    @media #{$brk-max} {
+	font-size: 5.5em;
+	letter-spacing: 3px;
+	margin-top: 65vh;//9em
+    }
+}
+
+
+
+.introduction--graphics {
+    margin-top: 50vh;
+
+    @media #{$brk-tablet} {
+	margin-top: 12em;
+    }
+
+    @media #{$brk-desktop} {
+	margin-top: 70vh;
+    }
+
+    @media #{$brk-max} {
+	margin-top: 65vh;
+    }
+}
+
+
+.introduction_p {
+    font-size: 1.2em;
+    letter-spacing: 3px;
+    line-height: 1.3em;
+    color: var(--Theme-Color-White-Lt);
+    animation-delay: 1.2s;//1s
+}
+
+
+
+.introduction_svg_icon {
+    
+    @include svg-icon(
+	$size: 55px,
+	$fill: var(--Theme-Color-White)
+    )
+    text-align: center;
+    animation: fade-slide-up 1s 1s ease-out forwards,
+	       pulse 2s 3s ease-out infinite;
+    opacity: 0;
+
+
+    @media #{$brk-tablet} {
+	@include svg-icon(
+	    $size: 65px,
+	    $fill: var(--Theme-Color-White)
+	)
+    }
+}
+
+
+
+
+
+
+/* Animations */
+
+@Keyframes no-transform {
+    100% {
+    opacity: 1;
+    transform: none;
+    }
+}
+
+@keyframes fade-slide-up {
+    0% {
+	opacity: 0;
+	transform: translateY(4rem);
+    }
+    100% {
+	opacity: 1;
+	transform: none;
+    }
+}
+
+@keyframes pop-in {
+    0% {
+	opacity:0;
+	transform: translateY(-4rem) scale(.8);
+    }
+    100% {
+	opacity: 1;
+	transform: none;
+    }
+}
+
+
+
+@keyframes pulse {
+    0% {
+	opacity: 1;
+	transform: none;
+    }
+    
+    50% {
+	opacity: .8;
+	transform: scale(.8);
+    }
+    
+    100% {
+	opacity: 1;
+	transform: none;
+    }
+}
+
+
+
+
+
+

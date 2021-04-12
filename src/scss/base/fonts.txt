@@ -1,0 +1,25 @@
+Google Fonts - https://fonts.google.com/
+
+
+Embed Font
+
+To embed your selected fonts into a webpage, copy this code into the <head> of your HTML document.
+
+
+STANDARD
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,700,700i|Nunito+Sans:400,400i,700|Quattrocento+Sans:400,400i,700&display=swap" rel="stylesheet">
+
+
+OR Use:  @IMPORT
+<style>
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,700,700i|Nunito+Sans:400,400i,700|Quattrocento+Sans:400,400i,700&display=swap');
+</style>
+
+
+
+Specify in CSS
+Use the following CSS rules to specify these families:
+
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Quattrocento Sans', sans-serif;

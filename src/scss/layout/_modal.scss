@@ -1,0 +1,179 @@
+/* ========================================================================== */
+/* _modal.scss                                                                */
+/* ========================================================================== */
+
+
+.overlay {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    z-index:1;
+    left: 0;
+    top:0;
+    height: 100%;
+    width:100%;
+    overflow: auto;// enable scrool bar if needed
+    background-color: var(--Overlay);
+    animation-name: overlayopen;
+    animation-duration: 0.5s;
+}
+
+
+
+.modal {
+    display: none;
+    background-color: var(--Theme-Color-White);
+    border: 4px solid var(--Theme-Color-White);
+    color: var(--Theme-Color-Black);
+    width: 90vw; 
+    height: 90vh;
+    margin: 0 auto;
+    padding: 1em;
+    overflow-y: scroll;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+
+    @media #{$brk-tablet} {
+	width: 90vw;
+	height: 80vh;
+	padding: 2em;
+    }
+
+    @media #{$brk-desktop} {
+	width: 922px;//1296px old no.
+	height: 85vh;
+	padding: 3em;
+    }
+
+    @media #{$brk-1278} {
+	width: 1150px;
+    }
+
+    @media #{$brk-max} {
+	width: 1296px;
+    }
+}
+
+.modal_img {
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid var(--Theme-Color-Black);
+}
+
+
+
+.modal_h3 {
+    color: var(--Theme-Color);
+    padding-bottom: 0.5em;
+    font-size: 1.5em;
+    line-height: 1em;
+
+     @media #{$brk-tablet} {
+	 font-size: 1.75em;
+    }
+    
+}
+
+
+.modal_h4 {
+    color: var(--Theme-Color-Grey);
+}
+
+
+
+.modal_ul {
+    padding-bottom: 1em;
+    list-style-type: none;
+}
+
+
+
+.modal_li {
+    font-size: 0.9em;
+    padding-left: 0.25em;
+    list-style: square inside;
+    color: var(--Theme-Color);
+}
+
+
+
+.modal_p {
+    font-size: 0.9em;
+    line-height: 1.4em;
+    padding-bottom: 1.25em;
+    
+    @media #{$brk-tablet} {
+	padding-bottom: 1.5em;
+    }
+
+    @media #{$brk-desktop} {
+	//padding: 0 1.25em 0 1.25em;
+    }
+
+    &::first-line {
+	font-weight: var(--body-weight-bold);
+    }  
+}
+
+
+
+.modalSite {
+    margin: 2em 0 1.5em 0;
+
+    &_a {
+	text-decoration: none;
+	padding: 1em 1em 1em 1em;
+	background: var(--Theme-Color);
+	color: var(--Theme-Color-White);
+
+	&:hover {
+	    background: var(--Theme-Color-Yellow);
+	    color: var(--Theme-Color-Black);
+	}
+    }   
+}
+
+
+
+// Class is assigned to figure in modal.js
+.galleryItem {
+    
+    @media #{$brk-desktop} {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto;
+	grid-gap: 1em;
+	place-items: center;
+    }
+
+    @media #{$brk-1278} {
+	grid-gap: 3em;
+    }
+}
+
+.galleryItem_Div_image {
+    
+    @media #{$brk-desktop} {
+	grid-column: 1/2;
+    }
+}
+
+.galleryItem_info {
+    padding: 0.75em;
+
+    @media #{$brk-tablet} {
+	padding: 1.5em;
+	grid-column:2/3;
+    }
+
+    @media #{$brk-desktop} {
+	padding: 2.5em;
+    }
+}
+
+
+@keyframes overlayopen {
+    from {opacity: 0}
+    to {opacity: 1}
+}

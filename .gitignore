@@ -1,0 +1,64 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ 
+
+
+# Emacs generated file #
+########################
+*~
+*#
+ 
+
+
+# Tern JS Linter - generated files #
+####################################
+.tern-port
+ 
+
+
+# Sass generated files #
+########################
+.sass-cache
+ 
+
+
+# Ignore Folder #
+#################
+src/assets/Working-Graphics/*.psd
+ 
+
+
+# Ignore any -original file #
+#############################
+*-original.*
+
+
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+
+
+# Output of 'npm pack'
+*.tgz

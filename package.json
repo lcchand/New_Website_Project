@@ -1,0 +1,31 @@
+{
+  "name": "portfolio-website",
+  "version": "2.0.0",
+  "description": "Redesign of Portfolio Site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lcchand/Portfolio-Website.git"
+  },
+  "author": "Lance Chandler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lcchand/Portfolio-Website/issues"
+  },
+  "homepage": "https://github.com/lcchand/Portfolio-Website#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "del": "^4.1.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "uglify-es": "^3.3.9"
+  }
+}

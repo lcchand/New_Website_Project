@@ -1,0 +1,68 @@
+/* ========================================================================== */
+/* _bio.scss                                                                  */
+/* ========================================================================== */
+
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+.bio img {
+    width: 38%;
+    border: 2px solid var(--Theme-Color-Grey);
+    border-radius: 50%;
+    align-self: center;
+    margin-bottom: 1em;
+
+    @media #{$brk-tablet} {
+	width: 20%;
+    }
+
+    @media #{$brk-desktop} {
+	width: 15%;
+    }
+
+    @media #{$brk-max} {
+	width: 12%;
+    }
+}
+
+p.bio {
+    padding: 0 5%;
+    
+     @media #{$brk-tablet} {
+	 align-self: center;
+	 padding: 5% 13%;
+	 margin-bottom: 0;
+     }
+
+      @media #{$brk-desktop} {
+	 padding: 5% 20%;
+    }
+
+     @media #{$brk-max} {
+	 padding: 5% 25%;
+    }
+}
+    
+
+.bio-gallery {
+    flex: 1 0 auto;
+    
+    
+    @media #{$brk-tablet} {
+	padding: 0 20%;
+    }
+
+    @media #{$brk-desktop} {
+	padding: 0 30%;
+    }
+
+}
+
+
+

@@ -1,0 +1,73 @@
+/* ========================================================================== */
+/*   graphics.scss                                                            */
+/* ========================================================================== */
+
+
+
+.graphic {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+
+    @media #{$brk-desktop} {
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 10px;
+    }
+}
+
+.graphic_article {
+    overflow: hidden;
+    background-color: var(--Theme-Color-White);
+    margin-bottom: 10px;
+
+    &_img {
+	display: block;
+	width: 100%;
+	border: 1px solid var(--Theme-Color-White);
+    }
+    
+}
+
+
+
+.graphic--h2_a {
+    color: var(--Theme-Color-White);
+}
+
+
+
+
+.graphic_info {
+    color: var(--Theme-Color-White);
+    padding-bottom: 1.2em;
+    align-self: start;
+
+    @media #{$brk-desktop} {
+	padding-bottom: 1.2em;
+    }   
+}
+
+
+
+.graphic_skills {
+
+    align-self: start;
+
+    &_h3 {
+	color: var(--Theme-Color-White);
+	font-weight: var(  --heading-weight-bold);
+	padding-bottom: .25em;
+    }
+
+    &_ul {
+	padding-left: 0.25em;
+	color: var(--Theme-Color-Yellow);
+    }
+
+    &_li {
+	list-style-type: square;
+	list-style-position: inside;
+    }
+	
+}

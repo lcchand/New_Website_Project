@@ -1,0 +1,100 @@
+/* ========================================================================== */
+/*   footer.scss                                                              */
+/* ========================================================================== */
+
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 4vw;
+    background-color: var(--Theme-Color-White);
+
+    @media #{$brk-tablet} {
+	padding: 0 6vw;
+    }  
+
+    @media #{$brk-desktop} {
+	flex-direction: row;
+	justify-content: center;
+	padding: 0 6vw 10vh 6vw;
+    }
+    
+    &_ul {
+	width: 100%;
+	list-style: none;
+	padding: 0;
+	text-decoration: none;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+
+	@media #{$brk-desktop} {
+	    justify-content: flex-start;
+	    margin: 0;
+	    margin-right: auto;
+	}
+    }
+
+    &_li {
+
+	@media #{$brk-desktop} {
+	    padding-right: 8%;
+	}
+    }   
+}
+
+
+
+
+// Icons for Github,Twitter, etc.
+.footer_a {
+    display: block;
+    padding: 10px;
+}
+
+
+
+
+.footer_svg {
+    opacity: 1;
+    //fill: var(--Theme-Color-Grey);
+    //width: 50px;
+    //height: 50px;
+    //padding: 10px;
+    @include svg-icon(
+	$size: 30px,
+	$fill: var(--Theme-Color-Grey)
+    )
+    
+
+    &:hover, &:focus {
+	fill: var(--Theme-Color-Grey-Dk);
+	transform: scale(1.1);
+	transition: 0.3s ease-in-out;
+    }
+}
+
+
+.copyright {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    @media #{$brk-tablet} {
+	margin-top: 25px;
+	margin-bottom:40px;
+    }
+    
+    @media #{$brk-desktop} {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: auto;
+    }
+}
+

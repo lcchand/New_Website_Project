@@ -1,0 +1,32 @@
+/* ========================================================================== */
+/* _gallery.scss                                                              */
+/* ========================================================================== */
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+
+    @media #{$brk-1278} {
+	grid-gap: 10px;
+    }
+}
+
+
+
+.rows--1 {
+    grid-template-rows: repeat(1, auto);
+}
+
+
+
+.rows--2 {
+    grid-template-rows: repeat(2, auto);
+}
+
+
+
+.rows--3 {
+    grid-template-rows: repeat(3, auto);
+}

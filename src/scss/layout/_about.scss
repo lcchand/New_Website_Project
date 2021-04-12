@@ -1,0 +1,103 @@
+/* ========================================================================== */
+/* _about.scss                                                                */
+/* ========================================================================== */
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+
+    @media #{$brk-tablet} {
+	grid-template-columns: 2fr 15px 1fr 1fr;
+	grid-template-rows: auto;
+	grid-gap: 0;
+    }
+
+    @media #{$brk-desktop} {
+	grid-template-columns: 2fr 30px 1fr 1fr;
+    }
+
+    @media #{$brk-1278} {
+	grid-template-columns: 2fr 50px 1fr 1fr;
+    }
+
+    @media #{$brk-max} {
+	grid-template-columns: 2fr 65px 1fr 1fr;
+    }
+
+    &_p {
+	grid-column: 1/3;
+	margin-bottom: 1em;
+
+	@media #{$brk-tablet} {
+	    grid-column: 1/2;
+	    grid-row: 1/3;
+	}
+    }
+
+    &_img {
+	grid-column: 1/3;
+	width: 38%;
+	border: 2px solid var(--Theme-Color-White);
+	border-radius: 50%;
+	justify-self: center;
+	margin-bottom: 1em;
+
+	@media #{$brk-tablet} {
+	    width: 20%;
+	}
+    }  
+}
+
+
+
+.aboutskills {  
+
+    @media #{$brk-tablet} {
+	padding-top: .5em;
+	padding-right: .25em;
+	padding-left: .5em;
+	padding-bottom: 1em;
+	background-color: var(--Theme-Color-Grey-Md);
+    }
+
+    @media #{$brk-desktop} {
+	padding-top: .75em;
+	padding-right: .5em;
+	padding-left: 1.25em;
+	padding-bottom: 1.75em;
+    }
+
+     @media #{$brk-1278} {
+	padding-top: .75em;
+	padding-right: .5em;
+	padding-left: 2em;
+	padding-bottom: 2.5em;
+    }
+    
+    &_h3 {
+	font-weight: var(--heading-weight-regular);
+	margin-bottom: .5em;
+    }
+    
+    &_li {
+	padding-left: 0.25em;
+	list-style: square inside;
+	color: var(--Theme-Color-Md);
+    }
+
+    &--dev {
+	
+	@media #{$brk-tablet} {
+	    grid-column: 3/4;
+	}
+    }
+
+    &--design {
+	
+	@media #{$brk-tablet} {
+	    grid-column: 4/5;
+	}
+    }
+}
+
